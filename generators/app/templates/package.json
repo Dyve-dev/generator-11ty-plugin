@@ -1,7 +1,7 @@
 {
-  "name": "<%= projectScope ? projectScope+'/' : '' %><%= projectName %>",
+  "name": "<%= scope ? scope+'/' : '' %><%= projectName %>",
   "version": "1.0.0",
-  "description": "<%= projectDesc ? projectDesc : '' %>",
+  "description": "<%= description ? description : '' %>",
   "main": "plugin/index.js",
   "scripts": {
     "build": "tsc",
@@ -9,18 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dyve-dev/11ty-plugin-sanity-responsiveImages.git"
+    "url": "<%= gitRepo ? 'git+'+gitRepo : '' %>"
   },
   "keywords": [
     "11ty",
     "eleventy"
   ],
-  "author": "<%= projectScope ? projectScope : '' %>",
+  "author": "<%= scope ? scope : '' %>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Dyve-dev/11ty-plugin-sanity-responsiveImages/issues"
+    "url": "<%= bugsUrl ? bugsUrl : '' %>"
   },
-  "homepage": "https://github.com/Dyve-dev/11ty-plugin-sanity-responsiveImages#readme",
+  "homepage": "<%= homeUrl ? homeUrl : '' %>",
   "devDependencies": {
     "@types/debug": "^4.1.5",
     "@types/node": "^14.14.25"
@@ -30,6 +30,6 @@
     "quicklink": "^2.0.0"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "<%= publishAccess %>"
   }
 }

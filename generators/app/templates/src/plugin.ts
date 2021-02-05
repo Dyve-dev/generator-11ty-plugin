@@ -1,11 +1,13 @@
 import Debug from 'debug';
 import { PluginOptions } from './types';
 
-const debug = Debug('<%= projectScope %>:11typlugin');
+const debug = Debug(
+  '<%= scope ? scope+":" : "" %>11typlugin<%= pluginName ? ":"+pluginName : "" %>'
+);
 
 const defaults: PluginOptions = {};
 
-export default {
+export const plugin = {
   initArguments: {},
   configFunction: async (eleventyConfig: any, options?: PluginOptions) => {
     console.log('new plugin');

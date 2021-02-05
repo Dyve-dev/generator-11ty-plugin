@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
     "dyve",
     "eleventy",
     "plugin",
-    "@11ty"
+    "11ty"
   ],
   "files": [
     "generators"
@@ -28,11 +28,16 @@
   },
   "homepage": "https://github.com/Dyve-dev/generator-11ty-plugin#readme",
   "dependencies": {
+    "slugify": "^1.4.6",
     "yeoman-generator": "^4.13.0",
     "yosay": "^2.0.2"
   },
   "devDependencies": {
+    "@types/node": "^14.14.25",
     "@types/yeoman-generator": "^4.11.3",
     "@types/yosay": "^0.0.29"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
