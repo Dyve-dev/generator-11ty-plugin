@@ -1,7 +1,7 @@
 name: publish
 on:
   merge:
-    branches: [$default-branch]
+    branches: [main]
 jobs:
   publish:
     runs-on: ubuntu-latest
