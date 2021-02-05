@@ -1,0 +1,38 @@
+{
+  "name": "@dyve/generator-11ty-plugin",
+  "version": "1.0.0",
+  "description": "@yeoman generator for @11ty plugin",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dyve-dev/generator-11ty-plugin.git"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "dyve",
+    "eleventy",
+    "plugin",
+    "@11ty"
+  ],
+  "files": [
+    "generators"
+  ],
+  "author": "dyve.dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dyve-dev/generator-11ty-plugin/issues"
+  },
+  "homepage": "https://github.com/Dyve-dev/generator-11ty-plugin#readme",
+  "dependencies": {
+    "yeoman-generator": "^4.13.0",
+    "yosay": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/yeoman-generator": "^4.11.3",
+    "@types/yosay": "^0.0.29"
+  }
+}
