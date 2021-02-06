@@ -102,9 +102,11 @@ class default_1 extends Generator {
     }
     writing() {
         this.fs.copyTpl(this.templatePath('gitignore'), this.destinationPath('.gitignore'));
+        this.fs.copyTpl(this.templatePath('npmignore'), this.destinationPath('.npmignore'));
         this.fs.copyTpl(this.templatePath('tsconfig.json'), this.destinationPath('tsconfig.json'));
         this.fs.copyTpl(this.templatePath('editorconfig'), this.destinationPath('.editorconfig'));
         this.fs.copyTpl(this.templatePath('prettierrc'), this.destinationPath('.prettierrc'));
+        this.fs.copyTpl(this.templatePath('__test__'), this.destinationPath('__test__'));
         this.fs.copyTpl(this.templatePath('package.json'), this.destinationPath('package.json'), Object.assign(Object.assign({}, this.metadata), this.answers));
         this.fs.copyTpl(this.templatePath('src'), this.destinationPath('src'), Object.assign(Object.assign({}, this.metadata), this.answers));
     }

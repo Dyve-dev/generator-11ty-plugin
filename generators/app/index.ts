@@ -107,9 +107,11 @@ export default class extends Generator {
 
   writing() {
     this.fs.copyTpl(this.templatePath('gitignore'), this.destinationPath('.gitignore'));
+    this.fs.copyTpl(this.templatePath('npmignore'), this.destinationPath('.npmignore'));
     this.fs.copyTpl(this.templatePath('tsconfig.json'), this.destinationPath('tsconfig.json'));
     this.fs.copyTpl(this.templatePath('editorconfig'), this.destinationPath('.editorconfig'));
     this.fs.copyTpl(this.templatePath('prettierrc'), this.destinationPath('.prettierrc'));
+    this.fs.copyTpl(this.templatePath('__test__'), this.destinationPath('__test__'));
     this.fs.copyTpl(this.templatePath('package.json'), this.destinationPath('package.json'), {
       ...this.metadata,
       ...this.answers,
