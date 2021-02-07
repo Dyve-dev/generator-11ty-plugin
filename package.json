@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "test": "cd __test__ && cross-env NODE_ENV=test mocha --recursive './**/*spec.js' --exit || exit 1"
+    "test": "cd __test__ && cross-env NODE_ENV=test mocha --recursive --timeout 30000 './**/*spec.js' --exit || exit 1"
   },
   "repository": {
     "type": "git",
