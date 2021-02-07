@@ -22,6 +22,7 @@ describe('11ty-plugin:app', () => {
         /* .inDir(path.join(__dirname, '../_project'), (dir) => {
           console.log(dir);
         }) */
+        .inTmpDir((dir) => (appDir = dir))
         .withPrompts({
           projectName: 'test-plugin',
           scope: 'test',
