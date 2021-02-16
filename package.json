@@ -1,6 +1,6 @@
 {
   "name": "@dyve/generator-11ty-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "@yeoman generator for @11ty plugin",
   "main": "index.js",
   "scripts": {
