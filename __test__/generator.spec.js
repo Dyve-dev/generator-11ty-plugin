@@ -43,6 +43,7 @@ describe('11ty-plugin:app', () => {
             'src/types.ts',
             '__test__/index.njk',
             '__test__/plugin.spec.js',
+            '__test__/.eleventy.js',
           ]);
           assert.jsonFileContent('package.json', {
             name: 'test/test-plugin',

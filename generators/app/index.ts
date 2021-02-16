@@ -104,18 +104,32 @@ export default class extends Generator {
       },
     ]);
   }
+  configuring() {
+    this.fs.copyTpl(this.templatePath('config/gitignore'), this.destinationPath('.gitignore'));
+    this.fs.copyTpl(this.templatePath('config/npmignore'), this.destinationPath('.npmignore'));
+    this.fs.copyTpl(this.templatePath('config/tsconfig'), this.destinationPath('tsconfig.json'));
+    this.fs.copyTpl(
+      this.templatePath('config/editorconfig'),
+      this.destinationPath('.editorconfig')
+    );
+    this.fs.copyTpl(this.templatePath('config/prettierrc'), this.destinationPath('.prettierrc'));
+    this.fs.copyTpl(
+      this.templatePath('config/eleventy.js'),
+      this.destinationPath('__test__/.eleventy.js')
+    );
+    this.fs.copyTpl(
+      this.templatePath('config/package.json'),
+      this.destinationPath('package.json'),
+      {
+        ...this.metadata,
+        ...this.answers,
+      }
+    );
+  }
 
   writing() {
-    this.fs.copyTpl(this.templatePath('gitignore'), this.destinationPath('.gitignore'));
-    this.fs.copyTpl(this.templatePath('npmignore'), this.destinationPath('.npmignore'));
-    this.fs.copyTpl(this.templatePath('tsconfig.json'), this.destinationPath('tsconfig.json'));
-    this.fs.copyTpl(this.templatePath('editorconfig'), this.destinationPath('.editorconfig'));
-    this.fs.copyTpl(this.templatePath('prettierrc'), this.destinationPath('.prettierrc'));
     this.fs.copyTpl(this.templatePath('__test__'), this.destinationPath('__test__'));
-    this.fs.copyTpl(this.templatePath('package.json'), this.destinationPath('package.json'), {
-      ...this.metadata,
-      ...this.answers,
-    });
+
     this.fs.copyTpl(this.templatePath('src'), this.destinationPath('src'), {
       ...this.metadata,
       ...this.answers,
